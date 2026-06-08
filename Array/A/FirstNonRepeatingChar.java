@@ -7,13 +7,15 @@ public class FirstNonRepeatingChar {
         int[] freq = new int[256]; 
 
                 for (int i = 0; i < str.length(); i++) {
-            freq[str.charAt(i)]++;
+                	char ch=str.charAt(i);
+            freq[ch]++;
         }
 
         
         for (int i = 0; i < str.length(); i++) {
-            if (freq[str.charAt(i)] == 1) {
-                System.out.println("First non-repeating character: " +freq[str.charAt(i)] );
+        	char ch = str.charAt(i);
+            if (freq[ch] == 1) {
+                System.out.println("First non-repeating character: " + ch );
                 return;
             }
         }
